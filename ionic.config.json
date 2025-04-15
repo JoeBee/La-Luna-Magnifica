@@ -1,0 +1,7 @@
+{
+  "name": "La-Luna-Magnifica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
