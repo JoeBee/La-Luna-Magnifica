@@ -1,1 +1,50 @@
+/* Styling for the tab bar */
+ion-tab-bar {
+    --background: #0c0c1a;
+    /* Dark blue/black background */
 
+    /* Subtle star effect using multiple radial gradients */
+    background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.5), transparent 1px),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.4), transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.3), transparent 1px),
+        radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.4), transparent 1px),
+        radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.5), transparent 1px);
+    background-color: #0c0c1a;
+    /* Fallback color */
+    background-size: 100px 100px;
+    /* Adjust size for star density */
+
+    /* Ensure icons and labels are white */
+    ion-tab-button {
+        --color: #ffffff;
+        /* Color for inactive tabs */
+        --color-selected: #ffffff;
+        /* Color for the active tab */
+
+        ion-icon {
+            color: #ffffff;
+            /* Explicitly set icon color */
+            font-size: 38px; // Was 48px
+        }
+
+        ion-label {
+            color: #ffffff;
+            /* Explicitly set label color */
+            padding-bottom: 5px; // Move label up slightly
+        }
+
+        /* Highlight active tab */
+        &.tab-selected {
+
+            ion-icon,
+            ion-label {
+                color: var(--ion-color-primary);
+                /* Use primary color for active tab */
+            }
+        }
+    }
+}
+
+ion-tab-bar.taller-tab-bar {
+    height: 84px; // Default is ~56px, 50% taller is 84px
+}

@@ -35,3 +35,63 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+/* Custom App Styles */
+
+body {
+    color: white;
+    /* Set global font color to white */
+}
+
+/* Set global background image for all content areas, faded with a white overlay */
+ion-content {
+    --background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)),
+        /* Changed opacity from 0.6 to 0.05 */
+        url('/assets/OctopusMoon.jpg') no-repeat center center / cover;
+}
+
+/* Optional: Add a slight overlay for better text readability if needed */
+/*
+ion-content::part(scroll) {
+    background-color: rgba(255, 255, 255, 0.1); // Light overlay
+    // background-color: rgba(0, 0, 0, 0.3); // Dark overlay
+}
+*/
+
+/* Custom header background */
+.header-background {
+    --background: url('/assets/HeaderLaLunaMagnífica.png') no-repeat center center / 100% 100% !important;
+    /* Ensure image stretches to fill */
+}
+
+/* Style for the header title */
+ion-header ion-toolbar ion-title {
+    color: white;
+    /* Already white, kept for specificity */
+    font-weight: bold;
+    font-size: 1.3em;
+    /* Adjust size as needed */
+}
+
+/* Custom Moon-style Buttons */
+ion-button {
+    --background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+    /* Light gray gradient */
+    --color: white;
+    --border-radius: 15px;
+    /* Rounded corners */
+    --border-color: #b0b0b0;
+    /* Subtle border */
+    --border-width: 1px;
+    /* Neumorphic-style shadow for depth */
+    --box-shadow: 2px 2px 5px #b0b0b0, -2px -2px 5px #ffffff;
+    text-transform: none;
+    /* Keep button text case as defined */
+    font-weight: 600;
+    /* Slightly bolder text */
+
+    /* States for interaction feedback */
+    --background-hover: linear-gradient(145deg, #d8d8d8, #b8b8b8);
+    --background-activated: linear-gradient(145deg, #c0c0c0, #e0e0e0);
+    --background-focused: linear-gradient(145deg, #d8d8d8, #b8b8b8);
+}

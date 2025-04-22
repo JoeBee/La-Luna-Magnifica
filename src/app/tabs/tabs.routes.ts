@@ -7,30 +7,30 @@ export const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'round-earth',
         loadComponent: () =>
-          import('../tab1/tab1.page').then((m) => m.Tab1Page),
+          import('../pages/round-earth/round-earth.page').then((m) => m.RoundEarthPage),
       },
       {
-        path: 'tab2',
+        path: 'flat-earth',
         loadComponent: () =>
-          import('../tab2/tab2.page').then((m) => m.Tab2Page),
+          import('../pages/flat-earth/flat-earth.page').then((m) => m.FlatEarthPage),
       },
       {
-        path: 'tab3',
+        path: 'white-paper',
         loadComponent: () =>
-          import('../tab3/tab3.page').then((m) => m.Tab3Page),
+          import('../pages/white-paper/white-paper.page').then((m) => m.WhitePaperPage),
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/round-earth',
         pathMatch: 'full',
       },
     ],
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/round-earth',
     pathMatch: 'full',
   },
 ];
