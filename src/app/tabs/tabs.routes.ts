@@ -22,6 +22,11 @@ export const routes: Routes = [
           import('../pages/white-paper/white-paper.page').then((m) => m.WhitePaperPage),
       },
       {
+        path: 'reference',
+        loadComponent: () =>
+          import('../pages/reference/reference.page').then((m) => m.ReferencePage),
+      },
+      {
         path: '',
         redirectTo: '/tabs/round-earth',
         pathMatch: 'full',
