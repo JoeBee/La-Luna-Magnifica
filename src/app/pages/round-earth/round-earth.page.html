@@ -20,10 +20,10 @@
             <p style="margin: 0;">Lat {{ latitude$ | async | number:'1.4-4' }}, Lon {{ longitude$ | async |
                 number:'1.4-4' }}</p>
         </div>
-        <ion-button (click)="fetchMoonData()" [disabled]="isLoadingMoonData || (isLoadingLocation$ | async)">
+        <!-- <ion-button (click)="fetchMoonData()" [disabled]="isLoadingMoonData || (isLoadingLocation$ | async)">
             <span style="color: darkgreen;" *ngIf="!isLoadingMoonData">Summon Lunar Enlightenment</span>
             <span style="color: yellow;" *ngIf="isLoadingMoonData">Loading...</span>
-        </ion-button>
+        </ion-button> -->
     </div>
 
     <!-- Location Loading/Error Info (Absolutely Positioned) -->
